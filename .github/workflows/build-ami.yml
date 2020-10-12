@@ -1,0 +1,22 @@
+name: Build an AMI using Packer
+
+on:
+  push:
+    branches:
+      - 'main'
+jobs:
+  packer-ami-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Packer AMI Build
+        uses: zmingxie/packer-ami-builder@master
+        with:
+          packerArgs: 'build ami.json'
+          workDir: '.'
+        env:
+          AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
+          AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}
+          SUBNET_ID: ${{ secrets.SUBNET_ID }}

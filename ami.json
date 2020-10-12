@@ -3,7 +3,7 @@
       "aws_access_key": "",
       "aws_secret_key": "",
       "aws_region": "",
-      "subnet_id": "subnet-90fc4eb1",
+      "subnet_id": "",
       "source_ami": "ami-0dba2cb6798deb6d8",
       "ssh_username": "ubuntu"
     },
@@ -37,8 +37,7 @@
         "sudo apt-get update",
         "sudo apt-get install -y zip unzip",
         "curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -",
-        "sudo apt install nodejs",
-        "node --version"
+        "sudo apt install nodejs"
       ]
     }]
   }
