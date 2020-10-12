@@ -3,6 +3,7 @@ packer_cache/
 
 # Crash log
 crash.log
+.DS_Store
 
 # For built boxes
 *.box
