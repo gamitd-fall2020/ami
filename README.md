@@ -16,7 +16,7 @@ Packer is a tool for building identical machine images for multiple platforms fr
     ```
 
 2. `ami.json` file tells Packer what platforms to build images for and how you want to build them. In our
-    case, we'll create a simple AWS AMI with AMI ID - `ami-0817d428a6fb68645` that has NodeJS pre-installed.
+    case, we'll create a simple AMI using `Ubuntu 18 LTS (AMI ID ami-0817d428a6fb68645)` as your source image that has Node pre-installed.
 
     Export your AWS credentials as the `AWS_ACCESS_KEY`,`AWS_SECRET_KEY`, `AWS_REGION` and `SUBNET_ID` as environment variables.
 
@@ -27,4 +27,4 @@ Packer is a tool for building identical machine images for multiple platforms fr
     ...
     ```
 
-    Packer will build an AMI according to the "ami.json" template. The AMI will be available in your AWS account. To delete the AMI, you must manually delete it using the [AWS console](https://console.aws.amazon.com/). Packer builds your images, it does not manage their lifecycle. Where they go, how they're run, etc., is up to you.
+    Packer will build an AMI according to the `ami.json` template. The AMI will be available in your AWS account. To delete the AMI, you must manually delete it using the [AWS console](https://console.aws.amazon.com/). Packer builds your images, it does not manage their lifecycle. Where they go, how they're run, etc., is up to you.
