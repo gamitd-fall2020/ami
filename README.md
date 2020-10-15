@@ -12,7 +12,7 @@ Packer is a tool for building identical machine images for multiple platforms fr
 1. Clone the repository
 
     ```sh
-    $ git@github.com:gamitd-fall2020/ami.git
+    $ git clone git@github.com:gamitd-fall2020/ami.git
     ```
 
 2. `ami.json` file tells Packer what platforms to build images for and how you want to build them. In our
