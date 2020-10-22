@@ -1,4 +1,4 @@
-name: Build an AMI using Packer
+name: Build AMI
 
 on:
   push:
