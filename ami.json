@@ -35,7 +35,7 @@
       "type": "shell",
       "inline": [
         "sleep 30",
-        "aws_region = {user `aws_region`}}",
+        "aws_region = {{user `aws_region`}}",
         "sudo apt-get update",
         "echo 'debconf debconf/frontend select Noninteractive' | sudo debconf-set-selections",
         "sudo apt-get install -y zip unzip",
