@@ -5,8 +5,9 @@
       "aws_region": "",
       "subnet_id": "",
       "ami_users": "{{ env `AMI_USERS`}}",
-      "source_ami": "ami-0817d428a6fb68645",
-      "ssh_username": "ubuntu"
+      "ssh_username": "ubuntu",
+      "source_ami": "ami-0817d428a6fb68645"
+      
     },
     "builders": [
       {
@@ -35,7 +36,6 @@
       "type": "shell",
       "inline": [
         "sleep 30",
-        "aws_region = {{user `aws_region`}}",
         "sudo apt-get update",
         "echo 'debconf debconf/frontend select Noninteractive' | sudo debconf-set-selections",
         "sudo apt-get install -y zip unzip",
@@ -44,7 +44,7 @@
         "sudo apt-get install -y ruby",
         "sudo apt-get install -y wget",
         "cd /home/ubuntu",
-        "wget https://aws-codedeploy-${aws_region}.s3.${aws_region}.amazonaws.com/latest/install",
+        "wget https://aws-codedeploy-us-east-1.s3.us-east-1.amazonaws.com/latest/install",
         "chmod +x ./install",
         "sudo ./install auto",
         "sudo service codedeploy-agent status"
