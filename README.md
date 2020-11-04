@@ -2,7 +2,7 @@
 
 Packer is a tool for building identical machine images for multiple platforms from a single source configuration.
 
-## Installing Packer
+## Installing Packer Guide
 
     Follow the steps given in the following link:
     https://learn.hashicorp.com/tutorials/packer/getting-started-install
